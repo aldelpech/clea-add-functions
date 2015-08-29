@@ -14,11 +14,10 @@ get_header(); // Loads the header.php template. ?>
 	<section class="liste-des-couleurs">
 	<?php if( function_exists( 'clea_add_func_generate_shades' ) ) {
 		echo clea_add_func_generate_shades() ; ?>
-		<p> la fonction 'clea_add_func_generate_shades' existe</p>
 	<?php
-		echo clea_add_func_generate_shades();
 	} else { ?>
 		<p> la fonction 'clea_add_func_generate_shades' n'existe pas</p>
+		<p>Il faut activer le plugin clea-add-functions </p>
 	<?php } ?>
 		
 	</section>

@@ -84,20 +84,25 @@ function clea_add_func_define_colors() {
 /* generate code for page template */
 function clea_add_func_generate_shades() {
 	$colors = clea_add_func_define_colors() ;
-	echo '<h2>VAR_DUMP colors</h2>';
-	var_dump( $colors );
-	echo "<br />";
+	echo '<h2>Choisir les associations de couleur d\'un site</h2>';
+	//var_dump( $colors );
+	// echo "<br />";
 	$texts = $colors ;
+	$ascii = 65; // "A" en ASCII
+	
 	foreach ( $colors as $color ) {
 		$background = $color ;
-		foreach ( $texts as $text) { ?>
-			<section style="background-color: <?php echo $background[ 'hexa' ]; ?>; color: <?php echo $text[ 'hexa' ]; ?>; padding: 9px; border: 2px solid #78909C; margin-bottom: 10px;">
-				<h2 style="color: <?php echo $text[ 'hexa' ]; ?>;">Titre H2</h2>
-				<p>fond '<?php echo $background[ 'hexa' ]; ?>' / police <?php echo $text[ 'hexa' ]; ?></p>
+		$count = 1; // reset count for each new background
+		foreach ( $texts as $text) { 
+			if ( $background[ 'hexa' ] <> $text[ 'hexa' ] ) { ?>
+				<section style="background-color: <?php echo $background[ 'hexa' ]; ?>; color: <?php echo $text[ 'hexa' ]; ?>; padding: 9px; border: 2px solid #78909C; margin-bottom: 10px;">
+					<h2 style="color: <?php echo $text[ 'hexa' ]; ?>;">Composition n° <?php echo chr ( $ascii ); ?> <?php echo $count; ?></h2>
+					<p>fond '<?php echo $background[ 'hexa' ]; ?>' / police <?php echo $text[ 'hexa' ]; ?></p>
 				</section>
-				CASE A
-			</section>
-		<?php		
+				<?php	
+				$count++;
+			}
 		}
+		$ascii++;
 	}
 }
