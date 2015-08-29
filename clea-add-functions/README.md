@@ -1,8 +1,19 @@
-# Thème enfant de Clea Base - pour PP
-==========
-## en cours d'ajustements importants
+=== CLEA add functions ===
+Contributors: Anne-Laure
+Tags: 
+Requires WordPress at least: 3.0
+Tested up to: 4.2.4
+add functionalities which should not be in the theme
 
-## change log
 
-* link are styled differently whether they open in another tab or not
-* functions now contains a jquery script so that nested img in a will have a different class
+== DESCRIPTION ==
+* 
+
+== NOTES ==
+* 
+
+== Changelog ==
+
+
+= Version 0.1 =
+* initialisation 
