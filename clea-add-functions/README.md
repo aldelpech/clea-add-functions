@@ -1,19 +1,8 @@
-=== CLEA add functions ===
-Contributors: Anne-Laure
-Tags: 
-Requires WordPress at least: 3.0
-Tested up to: 4.2.4
-add functionalities which should not be in the theme
+# Thème enfant de Clea Base - pour PP
+==========
+## en cours d'ajustements importants
 
+## change log
 
-== DESCRIPTION ==
-* 
-
-== NOTES ==
-* 
-
-== Changelog ==
-
-
-= Version 0.1 =
-* initialisation 
+* link are styled differently whether they open in another tab or not
+* functions now contains a jquery script so that nested img in a will have a different class
